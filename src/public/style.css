@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#chat {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#chat #box-messages {
+    flex: 1;
+    background-color: #f1f1f1;
+    overflow-y: auto;
+    position: relative;
+}
+
+.box-message {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    padding: 0 10px;
+}
+
+#chat #box-messages .box-message .message {
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    word-break: break-all;
+}
+
+.from-me {
+    display: flex;
+    justify-content: end;
+}
+
+.message-from-me {
+    background-color: lightgreen !important;
+}
+
+#chat #box-inputs {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    border-top: 1px solid gray;
+}
+
+#chat #box-inputs input {
+    height: 100%;
+    border: none;
+}
+
+#chat #box-inputs input[type='text'] {
+    flex: 1;
+    padding: 0 20px;
+    outline: none;
+}
+
+#chat #box-inputs input[type='submit'] {
+    width: 150px;
+    transition: 0.3s;
+}
+
+#chat #box-inputs input[type='submit']:hover {
+    background-color: green;
+    cursor: pointer;
+    color: #fff;
+}
